@@ -1,0 +1,36 @@
+.instructor-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f8fa;
+  transition: transform 0.3s ease;
+}
+
+.instructor-card:hover {
+  transform: translateY(-5px);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px 0;
+  margin-top: -20px;
+}
+
+.social-icons a {
+  background-color: #202A44;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 14px;
+
+}
+
+.social-icons a:hover {
+  background-color: #007e91;
+}

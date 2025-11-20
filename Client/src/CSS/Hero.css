@@ -1,0 +1,84 @@
+.hero-section {
+  background: url('./bg1.jpg') no-repeat center center/cover;
+  height: 70vh;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.small-text {
+  color: #202A44;
+  font-weight: bold;
+}
+
+.main-heading {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.read-more,
+.join-now {
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.read-more {
+  background-color: #202A44;
+  color: white;
+  animation: slideLeft 1s ease-out;
+}
+
+.join-now {
+  background-color: white;
+  color: black;
+  animation: slideRight 1s ease-out;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

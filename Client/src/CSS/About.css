@@ -1,0 +1,52 @@
+/* Hero Section unique for About page */
+.about-hero-section {
+  background: linear-gradient(135deg, #c27639, #7320e6);
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* floating gradient animation */
+.about-hero-section::before,
+.about-hero-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+.about-hero-section::before {
+  width: 300px;
+  height: 300px;
+  top: -80px;
+  left: -100px;
+  background: rgba(255, 193, 7, 0.6);
+}
+
+.about-hero-section::after {
+  width: 250px;
+  height: 250px;
+  bottom: -60px;
+  right: -80px;
+  background: rgba(13, 110, 253, 0.6);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-30px) translateX(20px);
+  }
+}
+
+/* highlight text */
+.about-highlight {
+  color: #ffc107;
+}

@@ -1,0 +1,28 @@
+.service-section {
+  background-color: #fff;
+}
+
+.service-card {
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 188, 212, 0.05); /* light cyan */
+  transition: all 0.4s ease;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background-color: #202A44;
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.service-card:hover i {
+  color: #fff;
+}
+
+.service-card i {
+  color: #202A44;
+  transition: color 0.3s ease;
+}

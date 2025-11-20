@@ -1,0 +1,137 @@
+.testimonials-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9fafb;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.nav-button:hover {
+  color: #000;
+}
+
+.testimonial-card-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.testimonial-card {
+  width: 100%;
+  max-width: 400px;
+  min-height: 280px;
+  padding: 25px 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
+  transform: scale(0.9);
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.02);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.student-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #202A44;
+}
+
+.student-message {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #333;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.student-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 8px;
+}
+
+.indicator-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.indicator-square {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.indicator-square.checked {
+  background-color: #202A44;
+  border-color: #202A44;
+}
+
+/* Optional: Responsive improvements */
+@media screen and (max-width: 600px) {
+  .testimonial-card {
+    max-width: 90%;
+    min-height: auto;
+    padding: 20px 15px;
+  }
+
+  .student-message {
+    font-size: 0.95rem;
+  }
+
+  .student-name {
+    font-size: 0.95rem;
+  }
+}

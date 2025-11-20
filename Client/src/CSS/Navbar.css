@@ -1,0 +1,65 @@
+/* Gradient animated text */
+.animated-logo {
+  font-weight: bold;
+  background: linear-gradient(
+    -45deg,
+    #007bff,
+    #202A44,
+    #ff9800,
+    #28a745
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite;
+}
+
+/* केवल "Pulse" वाले हिस्से का थोड़ा अलग effect */
+.pulse-part {
+  animation: colorFade 3s ease-in-out infinite alternate;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes colorFade {
+  0% {
+    color: #007bff;
+  }
+  50% {
+    color: #202A44;
+  }
+  100% {
+    color: #28a745;
+  }
+}
+
+/* Button styling */
+.join-btn {
+  background-color: #202A44 !important;
+  border: none !important;
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #202A44 !important;
+  color: white !important;
+}
+
+.navbar-nav .nav-link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #202A44;
+}

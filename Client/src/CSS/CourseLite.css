@@ -1,0 +1,96 @@
+.course-section {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+}
+
+.course-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f1f1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.course-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9fafc;
+  padding: 2rem;
+}
+
+.course-image img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.course-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.course-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.rating .star-icon {
+  width: 20px;
+  height: 20px;
+  color: #facc15;
+  fill: #facc15;
+}
+
+.rating span {
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.course-content p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.card-accent {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+}

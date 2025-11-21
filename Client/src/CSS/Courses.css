@@ -1,41 +1,217 @@
-.course-card {
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 12px;
-}
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+/* src/CSS/Courses.css */
+
+/* General Layout */
+.courses-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.module-card {
-  cursor: pointer;
-  border-radius: 12px;
-  transition: transform 0.3s, background 0.3s;
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1a202c; /* Dark text */
 }
-.module-card:hover {
-  transform: scale(1.05);
-  background: #f8f9fa;
+
+/* Course Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
+
+.course-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Course Card Style */
+.course-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c5282; /* Blue title */
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* Badges */
+.course-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+
+.badge-free {
+    background-color: #38a169; /* Green */
+    color: white;
+}
+
+.badge-paid {
+    background-color: #e53e3e; /* Red */
+    color: white;
+}
+
+/* --- Course Details Page Styling --- */
+
+.course-detail-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.back-link-top {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4c51bf;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.detail-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 30px;
+}
+
+.detail-content-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* मोबाइल के लिए रैप करने की अनुमति दें */
+}
+
+.video-player-area {
+    flex: 3; /* मुख्य सामग्री के लिए अधिक स्थान */
+    min-width: 60%; 
+}
+
+.modules-sidebar {
+    flex: 1; /* साइडबार के लिए कम स्थान */
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+}
+
+/* Video Player */
 .video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #000;
-  margin-top: 15px;
-  max-width: 900px;  /* optional: max width for center alignment */
-  margin-left: auto;
-  margin-right: auto;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.module-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #4c51bf; /* Indigo */
+    margin-bottom: 10px;
+}
+
+.module-description {
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.overview-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Sidebar Modules List */
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c5282;
+    margin-bottom: 15px;
+}
+
+.module-list {
+    list-style: none;
+    padding: 0;
+}
+
+.module-item {
+    padding: 12px 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+}
+
+.module-item:hover {
+    background-color: #e2e8f0;
+}
+
+.active-module {
+    background-color: #4c51bf;
+    color: white;
+    font-weight: 600;
+}
+
+.active-module:hover {
+    background-color: #43419a;
+}
+
+.module-index {
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .detail-content-wrapper {
+        flex-direction: column;
+    }
+
+    .video-player-area, .modules-sidebar {
+        min-width: 100%;
+    }
 }

@@ -16,6 +16,7 @@ import AdminLogin from "./admin/AdminLogin";
 import AdminDashboard from "./admin/AdminDashboard";
 import AdminCourses from "./admin/AdminCourses";
 import AdminUsers from "./admin/AdminUsers";
+import CourseDetails from "./Pages/CourseDetails";
 
 // Layout for user side
 const UserLayout = ({ children }) => {
@@ -68,7 +69,15 @@ function App() {
             </UserLayout>
           }
         />
-
+        
+<Route
+          path="/courses/:id"
+          element={
+            <UserLayout>
+              <CourseDetails />
+            </UserLayout>
+          }
+        />
         {/* Admin Side */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route
